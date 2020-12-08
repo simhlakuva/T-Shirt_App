@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="T_Shirt_App.MainPage">
+
+    <StackLayout>
+        <Frame BackgroundColor="DarkSlateGray" Padding="24" CornerRadius="0">
+            <Label Text="CUSTOM T-SHIRTS" HorizontalTextAlignment="Center" TextColor="AntiqueWhite" FontSize="36"/>
+        </Frame>
+
+        <Entry Placeholder="Enter First Name" x:Name="FirstName"/>
+        <Entry Placeholder="Enter Last Name" x:Name="LastName"/>
+
+        <Picker x:Name="genderpicker"
+        Title="Gender"
+        >
+            <Picker.ItemsSource>
+                <x:Array Type="{x:Type x:String}">
+                    <x:String>Male</x:String>
+                    <x:String>Female</x:String>
+                    <x:String>Prefer Not To Say</x:String>
+                </x:Array>
+            </Picker.ItemsSource>
+        </Picker>
+
+        <Picker x:Name="colorpicker" HorizontalOptions="FillAndExpand" Title="T-Shirt Color">
+            <Picker.Items>
+                <x:String>White</x:String>
+                <x:String>Black</x:String>
+                <x:String>Mustard Yellow</x:String>
+                <x:String>Pink</x:String>
+                <x:String>Red</x:String>
+                <x:String>Blue</x:String>
+                
+            </Picker.Items>
+        </Picker>
+
+        <Picker x:Name="sizepicker" HorizontalOptions="FillAndExpand" Title="T-Shirt Size">
+            <Picker.Items>
+                <x:String>XSmall</x:String>
+                <x:String>Small</x:String>
+                <x:String>Medium</x:String>
+                <x:String>Large</x:String>
+                <x:String>XLarge</x:String>
+                <x:String>XXLarge</x:String>
+            </Picker.Items>
+        </Picker>
+
+        <Entry Placeholder="Enter Shipping Address" x:Name="shippingAddress"/>
+        
+        
+        <Button Text="Submit Order" Clicked="submit_Clicked"/>
+        <Button  Text="View Order" Clicked="view"/>
+
+
+    </StackLayout>
+
+</ContentPage>
+
+ 
